@@ -3,9 +3,9 @@ From the 1.5.2 README.md:
 
 ## Creating a LAN Relay
 
-### Simply download (DEAD URL) and run `java -jar sp-relay.jar`
+### Simply download (DEAD URL) and run `java -jar EaglerSPRelay.jar`
 
-**Run `java -jar sp-relay.jar --debug` to view debug info like all the IPs of incoming connections, as it is not shown by default because logging all that info will reduce performance when the relay is being pinged many times a second depending on it's popularity.**
+**Run `java -jar EaglerSPRelay.jar --debug` to view debug info like all the IPs of incoming connections, as it is not shown by default because logging all that info will reduce performance when the relay is being pinged many times a second depending on it's popularity.**
 
 Edit the `relayConfig.ini` file generated on first launch to change the port and configure ratelimiting and such, and `relays.txt` to change the list of STUN and TURN relays reported to clients connecting to the relay, which are required to correctly establish a P2P LAN world connection in browsers
 
@@ -23,4 +23,4 @@ Ratelimiting is the same as eaglercraftbungee, "ping-ratelimit" is for limiting 
 
 The relay is not used for transferring the actual gameplay packets, it is only used for the initial discovery process to allow clients to find each other, stuff such as coordinates and chat messages aren't visible to the relay
 
-For your convenience, a "run.bat" and "run.sh" script is included which will auto-restart the relay if it crashes, remove the "--debug" flag from the java command in the script when used in production
+For your convenience a "run.sh" script is included which will auto-restart the relay if it crashes, remove the "--debug" flag from the java command in the script when used in production
